@@ -61,6 +61,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 extern void initialise_monitor_handles(void);
 
 /* USER CODE END 0 */
@@ -98,6 +99,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   /* Application Init */
   app_init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
