@@ -34,3 +34,6 @@ Build procedures:
 Visit the Getting started with STM32: STM32 step-by-step at 
 "https://wiki.st.com/stm32mcu/wiki/STM32StepByStep:Getting_started_with_STM32_:_STM32_step_by_step"
 to get started building STM32 Projects.
+
+
+Tiempo de buildear proyecto 5: 324ms

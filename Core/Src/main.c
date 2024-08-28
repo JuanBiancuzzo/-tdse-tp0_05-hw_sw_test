@@ -83,6 +83,14 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+  __HAL_RCC_GPIOC_CLK_ENABLE();  // Habilita el reloj para el puerto C
+
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /* USER CODE END Init */
 
@@ -110,6 +118,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  app_update();
+
+	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+	  HAL_Delay(3000);  // Retardo de 3000 ms
   }
   /* USER CODE END 3 */
 }
